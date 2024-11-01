@@ -14,20 +14,20 @@ Custom temp folder path.
 Option to skip hidden files/folders (default: true).
 Option to preserve empty folders (default: true).
 
-Error handling for file operations
-Progress reporting through console output
+Error handling for file operations.
+Progress reporting through console output.
 
 To use this node:
 
-Install via Git
-Restart ComfyUI
-Enter you temp folder path
+Install via Git.
+Restart ComfyUI.
+Enter you temp folder path.
 
 You can then add the "Temp Folder Cleaner" node at the end of your workflow and connect your image output to it. The node will:
 
-Process any images passed to it
-Clear the specified temp folder
-Pass the images through unchanged
+Process any images passed to it.
+Clear the specified temp folder.
+Pass the images through unchanged.
 
 Configuration options:
 
