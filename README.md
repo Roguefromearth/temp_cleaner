@@ -1,4 +1,4 @@
-# temp_cleaner
+# ComfyUI Temp Folder Cleaner
 workflow cleanup
 ![Screenshot 2024-11-01 141317](https://github.com/user-attachments/assets/fdb8f019-6794-4e33-b686-405cbc6aeb97)
 
