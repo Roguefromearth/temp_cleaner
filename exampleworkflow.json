@@ -1,0 +1,138 @@
+{
+  "20": {
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "44": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 467041372481589,
+      "steps": 5,
+      "cfg": 2,
+      "sampler_name": "dpmpp_sde_gpu",
+      "scheduler": "karras",
+      "start_at_step": 0,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "20",
+        0
+      ],
+      "positive": [
+        "57",
+        0
+      ],
+      "negative": [
+        "58",
+        0
+      ],
+      "latent_image": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "KSampler (Advanced)"
+    }
+  },
+  "49": {
+    "inputs": {
+      "samples": [
+        "44",
+        0
+      ],
+      "vae": [
+        "20",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "57": {
+    "inputs": {
+      "text": "beautiful women running on a mountain",
+      "speak_and_recognation": true,
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive Prompt"
+    }
+  },
+  "58": {
+    "inputs": {
+      "text": "photoshop, video game, ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, mutation, mutated, extra limbs, extra legs, extra arms, disfigured, deformed, body out of frame, bad art, bad anatomy, 3d render, double, clones, twins, brothers, same face, repeated person, long neck, make up, ugly, animated, hat, poorly drawn, out of frame, text, watermark, signature, logo, split image, copyright, cartoon, desaturate",
+      "speak_and_recognation": true,
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "60": {
+    "inputs": {
+      "width": 896,
+      "height": 1152,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "62": {
+    "inputs": {
+      "images": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "63": {
+    "inputs": {
+      "images": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "64": {
+    "inputs": {
+      "temp_folder": "E:\\ComfyUI_windows_portable\\ComfyUI\\temp",
+      "skip_hidden": true,
+      "preserve_folders": false,
+      "images": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "TempCleaner",
+    "_meta": {
+      "title": "Temp Folder Cleaner"
+    }
+  }
+}
