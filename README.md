@@ -10,10 +10,9 @@ Takes an image input so it can be added at the end of any workflow
 Passes through the image unchanged (allowing for workflow continuation if needed)
 Configurable options:
 
-Custom temp folder path
-Option to skip hidden files/folders (default: true)
-Option to preserve empty folders (default: true)
-
+Custom temp folder path.
+Option to skip hidden files/folders (default: true).
+Option to preserve empty folders (default: true).
 
 Error handling for file operations
 Progress reporting through console output
